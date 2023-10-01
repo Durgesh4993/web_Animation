@@ -24,7 +24,7 @@ information. -->
 
 ## Task
 
-- [ ] Follow Us On social media -
+- [ ] Connect Us On social media -
 - [ ]      <a href="https://github.com/Durgesh4993" target="_blank">GitHub</a>
 - [ ]      <a href="https://www.linkedin.com/in/durgesh4993/" target="_blank">LinkedIn</a>
 - [ ]     <a href="https://www.youtube.com/channel/UCRFVEkJLCknREaO40evl1uQ" target="_blank">YouTube</a>
