@@ -50,7 +50,6 @@ Star the repository by pressing the topmost-right button to start your wonderful
 
 
 
-Made with [contributors-img](https://contributors-img.web.app).
 
 
 ## Help Contributing Guides :crown:
