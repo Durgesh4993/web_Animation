@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar Animation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
     <div class="navigation">
@@ -49,20 +50,26 @@
                     <span class="text">Settings</span>
                 </a>
             </li>
+
             <div class="indicator"></div>
         </ul>
     </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
     <script>
-        const list = document.querySelectorAll('.list');
+        let list = document.querySelectorAll('.list');
         function activeLink(){
-            list.forEach((item)=> 
+            list.forEach((item) =>
             item.classList.remove('active'));
             this.classList.add('active');
         }
+
         list.forEach((item)=>
         item.addEventListener('click',activeLink));
     </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
 </body>
 </html>
