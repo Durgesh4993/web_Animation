@@ -1,4 +1,4 @@
-.bouncingball {
+n.bouncingball {
     width:140px;
     height:140px;
     border-radius:100%;
@@ -34,4 +34,3 @@
           -webkit-animation-timing-function: ease-in;
       }
   }
-  
