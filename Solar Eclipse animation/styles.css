@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    /* justify-content: center; */
+    height: 100%;
+    /* align-items: center; */
+    animation: colorchange 6s infinite linear;
+}
+
+.container{
+    width:200px;
+    height: 200px;
+    position: relative;
+    margin:300px;
+}
+
+.sun, .moon{
+    width:200px;
+    height:200px;
+    top:0;
+    border-radius: 100%;
+    position: absolute;
+}
+.moon{
+    background-color: #fff;
+    animation: time 5s infinite linear, colorchange 6s infinite linear;
+}
+
+.sun{
+    background-color: rgb(255, 157, 0);
+}
+
+@keyframes time {
+    0% {
+      left: 170px;
+    }
+    100% {
+      left: -170px;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+      background: #fff;
+    }
+    50% {
+      background: #000;
+    }
+    100% {
+      background: #fff;
+    }
+}
