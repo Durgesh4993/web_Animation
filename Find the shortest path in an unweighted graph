@@ -1,0 +1,57 @@
+from collections import defaultdict, deque
+
+class Graph:
+    def __init__(self):
+        self.graph = defaultdict(list)
+
+    def add_edge(self, u, v):
+        self.graph[u].append(v)
+        self.graph[v].append(u)  # For undirected graph
+
+    def shortest_path(self, start, end):
+        if start not in self.graph or end not in self.graph:
+            return None
+
+        visited = set()
+        queue = deque()
+        parent = {}
+
+        queue.append(start)
+        visited.add(start)
+
+        while queue:
+            node = queue.popleft()
+            if node == end:
+                # Reconstruct the path from end to start
+                path = [end]
+                while node != start:
+                    node = parent[node]
+                    path.append(node)
+                path.reverse()
+                return path
+
+            for neighbor in self.graph[node]:
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    parent[neighbor] = node
+                    queue.append(neighbor)
+
+        return None
+
+# Example usage:
+g = Graph()
+g.add_edge("A", "B")
+g.add_edge("A", "C")
+g.add_edge("B", "D")
+g.add_edge("C", "E")
+g.add_edge("D", "F")
+g.add_edge("E", "F")
+
+start_node = "A"
+end_node = "F"
+shortest_path = g.shortest_path(start_node, end_node)
+
+if shortest_path:
+    print(f"Shortest path from {start_node} to {end_node}: {' -> '.join(shortest_path)}")
+else:
+    print(f"No path found from {start_node} to {end_node}")
