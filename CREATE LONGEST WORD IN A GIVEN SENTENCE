@@ -1,0 +1,23 @@
+def find_longest_word(sentence):
+    # Split the sentence into words using spaces as the separator
+    words = sentence.split()
+
+    # Initialize variables to store the longest word and its length
+    longest_word = ""
+    max_length = 0
+
+    # Iterate through the words to find the longest one
+    for word in words:
+        # Remove punctuation from the word, if necessary
+        cleaned_word = ''.join(c for c in word if c.isalnum())
+        
+        if len(cleaned_word) > max_length:
+            max_length = len(cleaned_word)
+            longest_word = cleaned_word
+
+    return longest_word
+
+# Example usage:
+sentence = "This is an example sentence with some long words like 'antiestablishmentarianism'."
+result = find_longest_word(sentence)
+print("The longest word in the sentence is:", result)
